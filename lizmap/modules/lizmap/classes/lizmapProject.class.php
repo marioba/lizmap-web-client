@@ -1204,7 +1204,6 @@ class lizmapProject extends qgisProject {
             2
         );
 
-
         if ( $this->hasEditionLayers() ) {
             $tpl = new jTpl();
             $dockable[] = new lizmapMapDockItem(
