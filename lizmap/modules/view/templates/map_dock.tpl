@@ -13,4 +13,8 @@
       </div>
     </div>
 
-<button id="dock-close"> {@view~map.bottomdock.toolbar.btn.clear.title@}</button>
+<input type="image" id="dock-close" src="{$j_themepath.'css/img/close.png'}" width="15" height="15"/>
+
+<!--button id="dock-close">
+  <img src="{$j_themepath.'css/img/close.png'}" width="15" height="15" alt={@view~map.bottomdock.toolbar.btn.clear.title@}</a>
+</button-->
