@@ -14,19 +14,20 @@
     <div class="thumbnail">
       <div class="liz-project">
         <img src="{$p->img}" alt="project image" class="liz-project-img">
-        <p class="liz-project-desc" style="display:none;">
+        <!--<p class="liz-project-desc" style="display:none;">
           <b>{$p->title}</b>
           <br/>
           <br/><b>{@default.project.abstract.label@}</b>&nbsp;: {$p->abstract|truncate:100}
           <br/>
           <br/><b>{@default.project.projection.label@}</b>&nbsp;: <span class="proj">{$p->proj}</span>
           <br/><b>{@default.project.bbox.label@}</b>&nbsp;: <span class="bbox">{$p->bbox}</span>
-        </p>
+        </p>-->
       </div>
-      <h5>{$p->title}</h5>
-      <p style="text-align:center;">
-        <a class="btn liz-project-view" href="{$p->url}">{@default.project.open.map@}</a>
-        <a class="btn liz-project-show-desc" href="#link-projet-{$idm}" onclick="$('#liz-project-modal-{$idm}').modal('show'); return false;">{@default.project.open.map.metadata@}</a>
+      <!--<h5>{$p->title}</h5>-->
+      <p style="text-align:right;">
+        <a class="btn liz-project-view" href="{$p->url}" style="display: none;">{@default.project.open.map@}</a>
+        <a href="#link-projet-{$idm}" onclick="$('#liz-project-modal-{$idm}').modal('show'); return false;">
+          <img src="{$j_themepath.'css/img/info.png'}" width="20" height="20" alt={@default.project.open.map.metadata@}</a>
       </p>
     </div>
 
