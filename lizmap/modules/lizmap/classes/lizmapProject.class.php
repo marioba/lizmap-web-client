@@ -1160,7 +1160,7 @@ class lizmapProject extends qgisProject {
                     'home',
                     jLocale::get('view~default.repository.list.title'),
                     $projectsTpl->fetch('view~map_projects'),
-                    0
+                    7
                 );
         }
 
@@ -1197,12 +1197,12 @@ class lizmapProject extends qgisProject {
             'wmsGetCapabilitiesUrl' => $wmsGetCapabilitiesUrl,
             'wmtsGetCapabilitiesUrl' => $wmtsGetCapabilitiesUrl
         ), $wmsInfo));
-        $dockable[] = new lizmapMapDockItem(
-            'metadata',
-            jLocale::get('view~map.metadata.link.label'),
-            $metadataTpl->fetch('view~map_metadata'),
-            2
-        );
+        // $dockable[] = new lizmapMapDockItem(
+        //     'metadata',
+        //     jLocale::get('view~map.metadata.link.label'),
+        //     $metadataTpl->fetch('view~map_metadata'),
+        //     2
+        // );
 
         if ( $this->hasEditionLayers() ) {
             $tpl = new jTpl();
@@ -1232,7 +1232,7 @@ class lizmapProject extends qgisProject {
                 'selectiontool',
                 jLocale::get('view~map.selectiontool.navbar.title'),
                 $tpl->fetch('view~map_selectiontool'),
-                1
+                4
             );
             $dock->icon = '<span class="icon-white icon-star" style="margin-left:2px; margin-top:2px;"></span>';
             $dockable[] = $dock;
@@ -1266,7 +1266,7 @@ class lizmapProject extends qgisProject {
                 'print',
                 jLocale::get('view~map.print.navbar.title'),
                 $tpl->fetch('view~map_print'),
-                4
+                5
             );
         }
 
@@ -1277,7 +1277,7 @@ class lizmapProject extends qgisProject {
                 'measure',
                 jLocale::get('view~map.measure.navbar.title'),
                 $tpl->fetch('view~map_measure'),
-                5
+                6
             );
         }
 
@@ -1335,12 +1335,12 @@ class lizmapProject extends qgisProject {
                 'project'=>$this->getKey(),
                 'gbContent'=>$gbContent
             ));
-            $dockable[] = new lizmapMapDockItem(
-                'permaLink',
-                jLocale::get('view~map.permalink.navbar.title'),
-                $tpl->fetch('view~map_permalink'),
-                8
-            );
+            // $dockable[] = new lizmapMapDockItem(
+            //     'permaLink',
+            //     jLocale::get('view~map.permalink.navbar.title'),
+            //     $tpl->fetch('view~map_permalink'),
+            //     8
+            // );
         }
 
         return $dockable;
