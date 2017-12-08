@@ -123,7 +123,7 @@ var lizAttributeTable = function() {
             if (hasAttributeTableLayers) {
 
                 // Add the list of layers in the summary table
-                var tHtml = '<table id="attribute-layer-list-table" class="table table-condensed table-hover table-striped" style="width:auto;">';
+                var tHtml = '<table id="attribute-layer-list-table" class="table table-condensed table-hover" style="width:auto;">';
                 for( var idx in attributeLayersDic) {
                     var cleanName = idx;
 
