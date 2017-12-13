@@ -2385,14 +2385,16 @@ var lizAttributeTable = function() {
                     && config.layers[featureType]['selectedFeatures']
                     && config.layers[featureType]['selectedFeatures'].length
                 ) {
-                    layer.params['SELECTION'] = featureType + ':' + config.layers[featureType]['selectedFeatures'].join();
+                    //layer.params['SELECTION'] = featureType + ':' + config.layers[featureType]['selectedFeatures'].join();
+
+                    //marioba's fix
+                    layer.params['SELECTION'] = layer.params['LAYERS'] + ':' + config.layers[featureType]['selectedFeatures'].join();
                     config.layers[featureType]['request_params']['selection'] = layer.params['SELECTION'];
                 }
                 else {
                     delete layer.params['SELECTION'];
                     config.layers[featureType]['request_params']['selection'] = null;
                 }
-
                 // Redraw openlayers layer
                 if( config.layers[featureType]['geometryType'] != 'none'
                     && config.layers[featureType]['geometryType'] != 'unknown'
