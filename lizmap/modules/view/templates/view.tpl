@@ -39,12 +39,14 @@
       </div>
       <div class="modal-body">
         <dl class="dl-horizontal">
-          <dt>{@view~map.metadata.h2.illustration@}</dt>
+          <dt></dt>
           <dd><img src="{$p->img}" alt="project image" width="150" height="150"></dd>
           <dt>{@default.project.title.label@}</dt>
           <dd>{$p->title}&nbsp;</dd>
           <dt>{@default.project.abstract.label@}</dt>
           <dd>{$p->abstract|nl2br}&nbsp;</dd>
+          <dt>{@view~map.metadata.contact.organization@}</dt>
+          <dd><a href="http://www.geoformer.ch">Geoformer&nbsp;</a></dd>
           <dt>{@default.project.projection.label@}</dt>
           <dd><span class="proj">{$p->proj}</span>&nbsp;</dd>
           <dt>{@default.project.bbox.label@}</dt>

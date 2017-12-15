@@ -299,6 +299,8 @@ CSS Sprite positions calculated via http://instantsprite.com/ or https://draeton
   border-left: 1px solid #F0F0F0;
   max-width:30%;
   right:auto;
+  /*marioba*/
+  width: 250px; 
 }
 #content.mobile #dock{
   max-width:100%;
